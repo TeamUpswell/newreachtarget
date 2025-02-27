@@ -42,7 +42,7 @@ function initMap() {
   };
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-  // Draw Abuja Exclusion circles (red) with map: null so they're hidden initially
+  // Draw Abuja Exclusion circles (red)
   abujaExclusion.forEach(data => {
     let circle = new google.maps.Circle({
       strokeColor: "#FF0000",
@@ -187,45 +187,106 @@ function toggleLayer(circlesArray, show) {
   });
 }
 
+// Helper function to display layer data
+function displayLayerData(layerName, circlesArray) {
+  const container = document.getElementById(`data-${layerName}`);
+  container.innerHTML = ""; // clear previous data
+  circlesArray.forEach(circle => {
+    const center = circle.getCenter();
+    const radius = circle.getRadius();
+    container.innerHTML += `Lat: ${center.lat().toFixed(6)}, Lng: ${center.lng().toFixed(6)}, Radius: ${radius.toFixed(2)}<br>`;
+  });
+}
+
 function setupLayerToggles() {
   // Abuja Layers
   document.getElementById("layer-abuja-exclusion").addEventListener("change", (e) => {
     toggleLayer(abujaExclusionCircles, e.target.checked);
+    if (e.target.checked) {
+      displayLayerData("abuja-exclusion", abujaExclusionCircles);
+    } else {
+      document.getElementById("data-abuja-exclusion").innerHTML = "";
+    }
   });
+  
   document.getElementById("layer-abuja-control").addEventListener("change", (e) => {
     toggleLayer(abujaControlCircles, e.target.checked);
+    if (e.target.checked) {
+      displayLayerData("abuja-control", abujaControlCircles);
+    } else {
+      document.getElementById("data-abuja-control").innerHTML = "";
+    }
   });
+  
   document.getElementById("layer-abuja-treatment").addEventListener("change", (e) => {
     toggleLayer(abujaTreatmentCircles, e.target.checked);
+    if (e.target.checked) {
+      displayLayerData("abuja-treatment", abujaTreatmentCircles);
+    } else {
+      document.getElementById("data-abuja-treatment").innerHTML = "";
+    }
   });
 
   // Adamawa Layers
   document.getElementById("layer-adamawa-treatment").addEventListener("change", (e) => {
     toggleLayer(adamawaTreatmentCircles, e.target.checked);
+    if (e.target.checked) {
+      displayLayerData("adamawa-treatment", adamawaTreatmentCircles);
+    } else {
+      document.getElementById("data-adamawa-treatment").innerHTML = "";
+    }
   });
+  
   document.getElementById("layer-adamawa-control").addEventListener("change", (e) => {
     toggleLayer(adamawaControlCircles, e.target.checked);
+    if (e.target.checked) {
+      displayLayerData("adamawa-control", adamawaControlCircles);
+    } else {
+      document.getElementById("data-adamawa-control").innerHTML = "";
+    }
   });
+  
   document.getElementById("layer-adamawa-exclusion").addEventListener("change", (e) => {
     toggleLayer(adamawaExclusionCircles, e.target.checked);
+    if (e.target.checked) {
+      displayLayerData("adamawa-exclusion", adamawaExclusionCircles);
+    } else {
+      document.getElementById("data-adamawa-exclusion").innerHTML = "";
+    }
   });
 
   // Nasarawa Layers
   document.getElementById("layer-nasarawa-treatment").addEventListener("change", (e) => {
     toggleLayer(nasarawaTreatmentCircles, e.target.checked);
+    if (e.target.checked) {
+      displayLayerData("nasarawa-treatment", nasarawaTreatmentCircles);
+    } else {
+      document.getElementById("data-nasarawa-treatment").innerHTML = "";
+    }
   });
+  
   document.getElementById("layer-nasarawa-control").addEventListener("change", (e) => {
     toggleLayer(nasarawaControlCircles, e.target.checked);
+    if (e.target.checked) {
+      displayLayerData("nasarawa-control", nasarawaControlCircles);
+    } else {
+      document.getElementById("data-nasarawa-control").innerHTML = "";
+    }
   });
+  
   document.getElementById("layer-nasarawa-exclusion").addEventListener("change", (e) => {
     toggleLayer(nasarawaExclusionCircles, e.target.checked);
+    if (e.target.checked) {
+      displayLayerData("nasarawa-exclusion", nasarawaExclusionCircles);
+    } else {
+      document.getElementById("data-nasarawa-exclusion").innerHTML = "";
+    }
   });
 }
 
 window.initMap = initMap;
 console.log("window.initMap:", window.initMap);
 
-// Optionally call initMap manually after window load:
 window.addEventListener("load", () => {
   if (typeof window.initMap === "function") {
     initMap();

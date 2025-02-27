@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nigeria Targeting Maps</title>
     <style>
-      #map {
+      html,
+      body {
         height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 80%; /* Adjust height so there's room for the data container at the bottom */
         width: 100%;
       }
       #layer-controls {
@@ -19,34 +25,54 @@
         z-index: 5;
         font-family: sans-serif;
       }
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
+      /* Data container positioned at the bottom */
+      #data-container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        font-family: sans-serif;
+        max-height: 20%;  /* Optional: limit height and add scrolling if needed */
+        overflow-y: auto;
+        box-sizing: border-box;
       }
     </style>
   </head>
   <body>
     <div id="layer-controls">
       <h3>Abuja Layers</h3>
-      <label><input type="checkbox" id="layer-abuja-exclusion" > Exclusion</label><br>
-      <label><input type="checkbox" id="layer-abuja-control" > Control</label><br>
-      <label><input type="checkbox" id="layer-abuja-treatment" > Treatment</label><br>
+      <label><input type="checkbox" id="layer-abuja-exclusion"> Exclusion</label><br>
+      <label><input type="checkbox" id="layer-abuja-control"> Control</label><br>
+      <label><input type="checkbox" id="layer-abuja-treatment"> Treatment</label><br>
       <h3>Adamawa Layers</h3>
-      <label><input type="checkbox" id="layer-adamawa-treatment" > Treatment</label><br>
-      <label><input type="checkbox" id="layer-adamawa-control" > Control</label><br>
-      <label><input type="checkbox" id="layer-adamawa-exclusion" > Exclusion</label><br>
+      <label><input type="checkbox" id="layer-adamawa-treatment"> Treatment</label><br>
+      <label><input type="checkbox" id="layer-adamawa-control"> Control</label><br>
+      <label><input type="checkbox" id="layer-adamawa-exclusion"> Exclusion</label><br>
       <h3>Nasarawa Layers</h3>
-      <label><input type="checkbox" id="layer-nasarawa-treatment" > Treatment</label><br>
-      <label><input type="checkbox" id="layer-nasarawa-control" > Control</label><br>
-      <label><input type="checkbox" id="layer-nasarawa-exclusion" > Exclusion</label>
+      <label><input type="checkbox" id="layer-nasarawa-treatment"> Treatment</label><br>
+      <label><input type="checkbox" id="layer-nasarawa-control"> Control</label><br>
+      <label><input type="checkbox" id="layer-nasarawa-exclusion"> Exclusion</label>
     </div>
+    
     <div id="map"></div>
+    
+    <!-- Data container at the bottom -->
+    <div id="data-container">
+      <div id="data-abuja-exclusion"></div>
+      <div id="data-abuja-control"></div>
+      <div id="data-abuja-treatment"></div>
+      <div id="data-adamawa-treatment"></div>
+      <div id="data-adamawa-control"></div>
+      <div id="data-adamawa-exclusion"></div>
+      <div id="data-nasarawa-treatment"></div>
+      <div id="data-nasarawa-control"></div>
+      <div id="data-nasarawa-exclusion"></div>
+    </div>
+
     <!-- Load main.js as a module -->
     <script type="module" src="main.js"></script>
-    <!-- Include Google Maps API with your API key -->
-   <!-- index.html -->
+    <!-- Include Google Maps API with your API key and callback -->
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWjpPtJZ58mVuHCdZ3ukSStaRATqzmto"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-export const abuja_control = [
+export const adamawaExclusion = [
     { center: { lat: 9.3711037, lng: 12.369243 },   radius: 16093.40 },
     { center: { lat: 9.4505022, lng: 12.4580454 },  radius: 16093.40 },
     { center: { lat: 9.3915283, lng: 12.5915903 },  radius: 16093.40 },

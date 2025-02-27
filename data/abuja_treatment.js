@@ -1,4 +1,4 @@
-export const abuja_treatment = [
+export const abujaTreatment = [
   { center: { lat: 9.2738206, lng: 7.3431068 }, radius: 4023.36 },
   { center: { lat: 9.2215579, lng: 7.2982286 }, radius: 4023.36 },
   { center: { lat: 9.2191855, lng: 7.4173616 }, radius: 4023.36 },

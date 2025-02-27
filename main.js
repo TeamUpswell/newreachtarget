@@ -1,13 +1,15 @@
+console.log("main.js loaded");
+
 // main.js
-import { abujaExclusion } from "./data/abuja_exclusion.js";
-import { abujaControl } from "./data/abuja_control.js";
-import { abujaTreatment } from "./data/abuja_treatment.js";
-import { adamawaTreatment } from "./data/adamawa_treatment.js";
-import { adamawaControl } from "./data/adamawa_control.js";
-import { adamawaExclusion } from "./data/adamawa_exclusion.js";
-import { nasarawaTreatment } from "./data/nasarawa_treatment.js";
-import { nasarawaControl } from "./data/nasarawa_control.js";
-import { nasarawaExclusion } from "./data/nasarawa_exclusion.js";
+//import { abujaExclusion } from "./data/abuja_exclusion.js";
+//import { abujaControl } from "./data/abuja_control.js";
+//import { abujaTreatment } from "./data/abuja_treatment.js";
+//import { adamawaTreatment } from "./data/adamawa_treatment.js";
+//import { adamawaControl } from "./data/adamawa_control.js";
+//import { adamawaExclusion } from "./data/adamawa_exclusion.js";
+//import { nasarawaTreatment } from "./data/nasarawa_treatment.js";
+//import { nasarawaControl } from "./data/nasarawa_control.js";
+//import { nasarawaExclusion } from "./data/nasarawa_exclusion.js";
 
 function initMap() {
     console.log("initMap called");
@@ -16,7 +18,6 @@ function initMap() {
       center: { lat: 9.0, lng: 8.0 },
     };
     const map = new google.maps.Map(document.getElementById("map"), mapOptions);
-    // ... add your map circles or other code ...
 
   // Example: Draw Abuja Exclusion circles (using red)
   abujaExclusion.forEach(data => {
@@ -137,5 +138,4 @@ function initMap() {
   });
 }
 
-// Expose initMap for the Google Maps API callback
 window.initMap = initMap;

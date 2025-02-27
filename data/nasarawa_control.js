@@ -1,4 +1,4 @@
-export const adamawa_control = [
+export const nasarawaControl = [
     { center: { lat: 9.2640488, lng: 12.3743117 }, radius: 2011 },
     { center: { lat: 9.2494869, lng: 12.3923934 }, radius: 2011 },
     { center: { lat: 9.2355935, lng: 12.4184859 }, radius: 2011 },

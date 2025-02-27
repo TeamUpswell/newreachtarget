@@ -2,7 +2,7 @@ console.log("main.js loaded");
 
 // main.js
 //import { abujaExclusion } from "./data/abuja_exclusion.js";
-//import { abujaControl } from "./data/abuja_control.js";
+import { abujaControl } from "./data/abuja_control.js";
 //import { abujaTreatment } from "./data/abuja_treatment.js";
 //import { adamawaTreatment } from "./data/adamawa_treatment.js";
 //import { adamawaControl } from "./data/adamawa_control.js";

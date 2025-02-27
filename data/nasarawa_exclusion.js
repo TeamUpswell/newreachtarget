@@ -34,12 +34,12 @@ export const nasarawaExclusion = [
     { center: { lat: 8.7747655,  lng: 9.3613147 },  radius: 40192.26 },
     { center: { lat: 7.773249,   lng: 9.0331495 },  radius: 40192.26 },
     { center: { lat: 8.9946774,  lng: 6.6970498 },  radius: 40192.26 },
-        { center: { lat: 9.1761607, lng: 7.587603 },   radius: 8017.00 },
-        { center: { lat: 9.1434086, lng: 7.6859716 },  radius: 8017.00 },
-        { center: { lat: 9.0912046, lng: 7.7148107 },  radius: 8017.00 },
-        { center: { lat: 8.923695,  lng: 7.5479558 },  radius: 8017.00 },
-        { center: { lat: 8.9854182, lng: 7.4909642 },  radius: 8017.00 },
-        { center: { lat: 9.0600146, lng: 7.499204 },   radius: 8017.00 },
-        { center: { lat: 9.1515435, lng: 7.5067571 },  radius: 8017.00 },
+    { center: { lat: 9.1998846, lng: 7.5855432 }, radius: 8017.00 },
+    { center: { lat: 9.1434086, lng: 7.6859716 }, radius: 8017.00 },
+    { center: { lat: 9.0912046, lng: 7.7148107 }, radius: 8017.00 },
+    { center: { lat: 8.9169116, lng: 7.5465825 }, radius: 8017.00 },
+    { center: { lat: 8.9854182, lng: 7.4909642 }, radius: 8017.00 },
+    { center: { lat: 9.0600146, lng: 7.499204 },  radius: 8017.00 },
+    { center: { lat: 9.1474761, lng: 7.4998907 }, radius: 8017.00 }
   ];
   

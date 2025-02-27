@@ -1,4 +1,4 @@
-export const circlesNasarawaExclusion = [
+export const nasarawa_exclusion = [
     { center: { lat: 9.3794854,  lng: 7.9002404 },  radius: 80956.09 },
     { center: { lat: 9.2295117,  lng: 8.3298777 },  radius: 80956.09 },
     { center: { lat: 8.9325309,  lng: 8.741865 },   radius: 80956.09 },

@@ -1,4 +1,4 @@
-export const circlesAbujaControl = [
+export const abuja_control = [
     { center: { lat: 8.841614, lng: 7.2214944 }, radius: 4023.36 },
     { center: { lat: 8.8977419, lng: 7.2353855 }, radius: 4023.36 },
     { center: { lat: 8.9449055, lng: 7.2646298 }, radius: 4023.36 },

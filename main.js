@@ -16,6 +16,7 @@ function initMap() {
       center: { lat: 9.0, lng: 8.0 },
     };
     const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    // ... add your map circles or other code ...
 
   // Example: Draw Abuja Exclusion circles (using red)
   abujaExclusion.forEach(data => {

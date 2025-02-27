@@ -1,4 +1,4 @@
-export const circlesAbujaExclusion = [
+export const abuja_exclusion = [
         { center: { lat: 9.410284,  lng: 7.3265312 },  radius: 16093.40 },
         { center: { lat: 9.412316,  lng: 7.4241543 },  radius: 16093.40 },
         { center: { lat: 9.3584582, lng: 7.4787426 },  radius: 16093.40 },

@@ -9,10 +9,8 @@ import { adamawaControl } from "./data/adamawa_control.js";
 import { adamawaExclusion } from "./data/adamawa_exclusion.js";
 import { nasarawaTreatment } from "./data/nasarawa_treatment.js";
 import { nasarawaControl } from "./data/nasarawa_control.js";
-console.log("nasarawaControl:", nasarawaControl);
 import { nasarawaExclusion } from "./data/nasarawa_exclusion.js";
 
-// Log imported data for debugging
 console.log("abujaExclusion:", abujaExclusion);
 console.log("abujaControl:", abujaControl);
 console.log("abujaTreatment:", abujaTreatment);
@@ -44,7 +42,7 @@ function initMap() {
   };
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-  // Draw Abuja Exclusion circles (red)
+  // Draw Abuja Exclusion circles (red) with map: null so they're hidden initially
   abujaExclusion.forEach(data => {
     let circle = new google.maps.Circle({
       strokeColor: "#FF0000",
@@ -52,7 +50,7 @@ function initMap() {
       strokeWeight: 2,
       fillColor: "#FF0000",
       fillOpacity: 0.35,
-      map: map,
+      map: null,
       center: data.center,
       radius: data.radius,
     });
@@ -67,7 +65,7 @@ function initMap() {
       strokeWeight: 2,
       fillColor: "#0000FF",
       fillOpacity: 0.35,
-      map: map,
+      map: null,
       center: data.center,
       radius: data.radius,
     });
@@ -82,7 +80,7 @@ function initMap() {
       strokeWeight: 2,
       fillColor: "#FF00FF",
       fillOpacity: 0.35,
-      map: map,
+      map: null,
       center: data.center,
       radius: data.radius,
     });
@@ -97,7 +95,7 @@ function initMap() {
       strokeWeight: 2,
       fillColor: "#800080",
       fillOpacity: 0.35,
-      map: map,
+      map: null,
       center: data.center,
       radius: data.radius,
     });
@@ -112,7 +110,7 @@ function initMap() {
       strokeWeight: 2,
       fillColor: "#008080",
       fillOpacity: 0.35,
-      map: map,
+      map: null,
       center: data.center,
       radius: data.radius,
     });
@@ -127,7 +125,7 @@ function initMap() {
       strokeWeight: 2,
       fillColor: "#FFA500",
       fillOpacity: 0.35,
-      map: map,
+      map: null,
       center: data.center,
       radius: data.radius,
     });
@@ -142,27 +140,27 @@ function initMap() {
       strokeWeight: 2,
       fillColor: "#00FF00",
       fillOpacity: 0.35,
-      map: map,
+      map: null,
       center: data.center,
       radius: data.radius,
     });
     nasarawaTreatmentCircles.push(circle);
   });
 
-// Draw Nasarawa Control circles (using yellow, for example)
-nasarawaControl.forEach(data => {
-  let circle = new google.maps.Circle({
-    strokeColor: "#FFFF00", // Yellow
-    strokeOpacity: 0.8,
-    strokeWeight: 2,
-    fillColor: "#FFFF00",
-    fillOpacity: 0.35,
-    map: map,
-    center: data.center,
-    radius: data.radius,
+  // Draw Nasarawa Control circles (yellow)
+  nasarawaControl.forEach(data => {
+    let circle = new google.maps.Circle({
+      strokeColor: "#FFFF00",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#FFFF00",
+      fillOpacity: 0.35,
+      map: null,
+      center: data.center,
+      radius: data.radius,
+    });
+    nasarawaControlCircles.push(circle);
   });
-  nasarawaControlCircles.push(circle);
-});
 
   // Draw Nasarawa Exclusion circles (olive)
   nasarawaExclusion.forEach(data => {
@@ -172,7 +170,7 @@ nasarawaControl.forEach(data => {
       strokeWeight: 2,
       fillColor: "#808000",
       fillOpacity: 0.35,
-      map: map,
+      map: null,
       center: data.center,
       radius: data.radius,
     });

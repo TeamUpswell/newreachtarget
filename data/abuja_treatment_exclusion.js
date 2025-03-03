@@ -27,7 +27,6 @@ export const abujaTreatmentExclusion = [
     { center: { lat: 9.3533118, lng: 8.9639932 }, radius: 40291.15 }, // Point 26
     { center: { lat: 9.927362, lng: 8.7113076 }, radius: 40291.15 }, // Point 27
     { center: { lat: 7.9304808, lng: 8.4531289 }, radius: 40291.15 }, // Point 28
-    { center: { lat: 9.39011, lng: 7.3125 }, radius: 40291.15 }, // Point 29
     { center: { lat: 8.67027, lng: 7.34744 }, radius: 40291.15 }, // Point 30
     
     ];

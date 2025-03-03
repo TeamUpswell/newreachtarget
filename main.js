@@ -1,38 +1,57 @@
 console.log("main.js loaded");
 
-// Import data modules
-import { abujaExclusion } from "./data/abuja_exclusion.js";
+// Import data modules with distinct names for the two exclusion types
+import { abujaTreatmentExclusion } from "./data/abuja_treatment_exclusion.js";
+import { abujaControlExclusion } from "./data/abuja_control_exclusion.js";
 import { abujaControl } from "./data/abuja_control.js";
 import { abujaTreatment } from "./data/abuja_treatment.js";
-import { adamawaTreatment } from "./data/adamawa_treatment.js";
-import { adamawaControl } from "./data/adamawa_control.js";
-import { adamawaExclusion } from "./data/adamawa_exclusion.js";
-import { nasarawaTreatment } from "./data/nasarawa_treatment.js";
-import { nasarawaControl } from "./data/nasarawa_control.js";
-import { nasarawaExclusion } from "./data/nasarawa_exclusion.js";
 
-console.log("abujaExclusion:", abujaExclusion);
+import { adamawaTreatmentExclusion } from "./data/adamawa_treatment_exclusion.js";
+import { adamawaControlExclusion } from "./data/adamawa_control_exclusion.js";
+import { adamawaControl } from "./data/adamawa_control.js";
+import { adamawaTreatment } from "./data/adamawa_treatment.js";
+
+import { nasarawaTreatmentExclusion } from "./data/nasarawa_treatment_exclusion.js";
+import { nasarawaControlExclusion } from "./data/nasarawa_control_exclusion.js";
+import { nasarawaControl } from "./data/nasarawa_control.js";
+import { nasarawaTreatment } from "./data/nasarawa_treatment.js";
+
+console.log("abujaTreatmentExclusion:", abujaTreatmentExclusion);
+console.log("abujaControlExclusion:", abujaControlExclusion);
 console.log("abujaControl:", abujaControl);
 console.log("abujaTreatment:", abujaTreatment);
-console.log("adamawaTreatment:", adamawaTreatment);
+
+console.log("adamawaTreatmentExclusion:", adamawaTreatmentExclusion);
+console.log("adamawaControlExclusion:", adamawaControlExclusion);
 console.log("adamawaControl:", adamawaControl);
-console.log("adamawaExclusion:", adamawaExclusion);
-console.log("nasarawaTreatment:", nasarawaTreatment);
+console.log("adamawaTreatment:", adamawaTreatment);
+
+console.log("nasarawaTreatmentExclusion:", nasarawaTreatmentExclusion);
+console.log("nasarawaControlExclusion:", nasarawaControlExclusion);
 console.log("nasarawaControl:", nasarawaControl);
-console.log("nasarawaExclusion:", nasarawaExclusion);
+console.log("nasarawaTreatment:", nasarawaTreatment);
 
 // Global variables to store the map and circle objects for toggling
-let map;
 
-let abujaExclusionCircles = [];
+// Abuja layers
+let abujaTreatmentExclusionCircles = [];
+let abujaControlExclusionCircles = [];
 let abujaControlCircles = [];
 let abujaTreatmentCircles = [];
-let adamawaTreatmentCircles = [];
+
+// Adamawa layers
+let adamawaTreatmentExclusionCircles = [];
+let adamawaControlExclusionCircles = [];
 let adamawaControlCircles = [];
-let adamawaExclusionCircles = [];
-let nasarawaTreatmentCircles = [];
+let adamawaTreatmentCircles = [];
+
+// Nasarawa layers
+let nasarawaTreatmentExclusionCircles = [];
+let nasarawaControlExclusionCircles = [];
 let nasarawaControlCircles = [];
-let nasarawaExclusionCircles = [];
+let nasarawaTreatmentCircles = [];
+
+let map;
 
 function initMap() {
   console.log("initMap called");
@@ -42,8 +61,8 @@ function initMap() {
   };
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-  // Draw Abuja Exclusion circles (red)
-  abujaExclusion.forEach(data => {
+  // Draw Abuja Treatment Exclusion circles (red)
+  abujaTreatmentExclusion.forEach(data => {
     let circle = new google.maps.Circle({
       strokeColor: "#FF0000",
       strokeOpacity: 0.8,
@@ -54,7 +73,22 @@ function initMap() {
       center: data.center,
       radius: data.radius,
     });
-    abujaExclusionCircles.push(circle);
+    abujaTreatmentExclusionCircles.push(circle);
+  });
+
+  // Draw Abuja Control Exclusion circles (dark red)
+  abujaControlExclusion.forEach(data => {
+    let circle = new google.maps.Circle({
+      strokeColor: "#8B0000",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#8B0000",
+      fillOpacity: 0.35,
+      map: null,
+      center: data.center,
+      radius: data.radius,
+    });
+    abujaControlExclusionCircles.push(circle);
   });
 
   // Draw Abuja Control circles (blue)
@@ -87,19 +121,34 @@ function initMap() {
     abujaTreatmentCircles.push(circle);
   });
 
-  // Draw Adamawa Treatment circles (purple)
-  adamawaTreatment.forEach(data => {
+  // Draw Adamawa Treatment Exclusion circles (orange)
+  adamawaTreatmentExclusion.forEach(data => {
     let circle = new google.maps.Circle({
-      strokeColor: "#800080",
+      strokeColor: "#FFA500",
       strokeOpacity: 0.8,
       strokeWeight: 2,
-      fillColor: "#800080",
+      fillColor: "#FFA500",
       fillOpacity: 0.35,
       map: null,
       center: data.center,
       radius: data.radius,
     });
-    adamawaTreatmentCircles.push(circle);
+    adamawaTreatmentExclusionCircles.push(circle);
+  });
+
+  // Draw Adamawa Control Exclusion circles (dark orange)
+  adamawaControlExclusion.forEach(data => {
+    let circle = new google.maps.Circle({
+      strokeColor: "#FF8C00",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#FF8C00",
+      fillOpacity: 0.35,
+      map: null,
+      center: data.center,
+      radius: data.radius,
+    });
+    adamawaControlExclusionCircles.push(circle);
   });
 
   // Draw Adamawa Control circles (teal)
@@ -117,34 +166,49 @@ function initMap() {
     adamawaControlCircles.push(circle);
   });
 
-  // Draw Adamawa Exclusion circles (orange)
-  adamawaExclusion.forEach(data => {
+  // Draw Adamawa Treatment circles (purple)
+  adamawaTreatment.forEach(data => {
     let circle = new google.maps.Circle({
-      strokeColor: "#FFA500",
+      strokeColor: "#800080",
       strokeOpacity: 0.8,
       strokeWeight: 2,
-      fillColor: "#FFA500",
+      fillColor: "#800080",
       fillOpacity: 0.35,
       map: null,
       center: data.center,
       radius: data.radius,
     });
-    adamawaExclusionCircles.push(circle);
+    adamawaTreatmentCircles.push(circle);
   });
 
-  // Draw Nasarawa Treatment circles (green)
-  nasarawaTreatment.forEach(data => {
+  // Draw Nasarawa Treatment Exclusion circles (olive)
+  nasarawaTreatmentExclusion.forEach(data => {
     let circle = new google.maps.Circle({
-      strokeColor: "#00FF00",
+      strokeColor: "#808000",
       strokeOpacity: 0.8,
       strokeWeight: 2,
-      fillColor: "#00FF00",
+      fillColor: "#808000",
       fillOpacity: 0.35,
       map: null,
       center: data.center,
       radius: data.radius,
     });
-    nasarawaTreatmentCircles.push(circle);
+    nasarawaTreatmentExclusionCircles.push(circle);
+  });
+
+  // Draw Nasarawa Control Exclusion circles (dark olive)
+  nasarawaControlExclusion.forEach(data => {
+    let circle = new google.maps.Circle({
+      strokeColor: "#556B2F",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#556B2F",
+      fillOpacity: 0.35,
+      map: null,
+      center: data.center,
+      radius: data.radius,
+    });
+    nasarawaControlExclusionCircles.push(circle);
   });
 
   // Draw Nasarawa Control circles (yellow)
@@ -162,19 +226,19 @@ function initMap() {
     nasarawaControlCircles.push(circle);
   });
 
-  // Draw Nasarawa Exclusion circles (olive)
-  nasarawaExclusion.forEach(data => {
+  // Draw Nasarawa Treatment circles (green)
+  nasarawaTreatment.forEach(data => {
     let circle = new google.maps.Circle({
-      strokeColor: "#808000",
+      strokeColor: "#00FF00",
       strokeOpacity: 0.8,
       strokeWeight: 2,
-      fillColor: "#808000",
+      fillColor: "#00FF00",
       fillOpacity: 0.35,
       map: null,
       center: data.center,
       radius: data.radius,
     });
-    nasarawaExclusionCircles.push(circle);
+    nasarawaTreatmentCircles.push(circle);
   });
 
   setupLayerToggles();
@@ -199,16 +263,25 @@ function displayLayerData(layerName, circlesArray) {
 }
 
 function setupLayerToggles() {
-  // Abuja Layers
-  document.getElementById("layer-abuja-exclusion").addEventListener("change", (e) => {
-    toggleLayer(abujaExclusionCircles, e.target.checked);
+  // --- Abuja Layers ---
+  document.getElementById("layer-abuja-treatment-exclusion").addEventListener("change", (e) => {
+    toggleLayer(abujaTreatmentExclusionCircles, e.target.checked);
     if (e.target.checked) {
-      displayLayerData("abuja-exclusion", abujaExclusionCircles);
+      displayLayerData("abuja-treatment-exclusion", abujaTreatmentExclusionCircles);
     } else {
-      document.getElementById("data-abuja-exclusion").innerHTML = "";
+      document.getElementById("data-abuja-treatment-exclusion").innerHTML = "";
     }
   });
-  
+
+  document.getElementById("layer-abuja-control-exclusion").addEventListener("change", (e) => {
+    toggleLayer(abujaControlExclusionCircles, e.target.checked);
+    if (e.target.checked) {
+      displayLayerData("abuja-control-exclusion", abujaControlExclusionCircles);
+    } else {
+      document.getElementById("data-abuja-control-exclusion").innerHTML = "";
+    }
+  });
+
   document.getElementById("layer-abuja-control").addEventListener("change", (e) => {
     toggleLayer(abujaControlCircles, e.target.checked);
     if (e.target.checked) {
@@ -217,7 +290,7 @@ function setupLayerToggles() {
       document.getElementById("data-abuja-control").innerHTML = "";
     }
   });
-  
+
   document.getElementById("layer-abuja-treatment").addEventListener("change", (e) => {
     toggleLayer(abujaTreatmentCircles, e.target.checked);
     if (e.target.checked) {
@@ -227,16 +300,25 @@ function setupLayerToggles() {
     }
   });
 
-  // Adamawa Layers
-  document.getElementById("layer-adamawa-treatment").addEventListener("change", (e) => {
-    toggleLayer(adamawaTreatmentCircles, e.target.checked);
+  // --- Adamawa Layers ---
+  document.getElementById("layer-adamawa-treatment-exclusion").addEventListener("change", (e) => {
+    toggleLayer(adamawaTreatmentExclusionCircles, e.target.checked);
     if (e.target.checked) {
-      displayLayerData("adamawa-treatment", adamawaTreatmentCircles);
+      displayLayerData("adamawa-treatment-exclusion", adamawaTreatmentExclusionCircles);
     } else {
-      document.getElementById("data-adamawa-treatment").innerHTML = "";
+      document.getElementById("data-adamawa-treatment-exclusion").innerHTML = "";
     }
   });
-  
+
+  document.getElementById("layer-adamawa-control-exclusion").addEventListener("change", (e) => {
+    toggleLayer(adamawaControlExclusionCircles, e.target.checked);
+    if (e.target.checked) {
+      displayLayerData("adamawa-control-exclusion", adamawaControlExclusionCircles);
+    } else {
+      document.getElementById("data-adamawa-control-exclusion").innerHTML = "";
+    }
+  });
+
   document.getElementById("layer-adamawa-control").addEventListener("change", (e) => {
     toggleLayer(adamawaControlCircles, e.target.checked);
     if (e.target.checked) {
@@ -245,26 +327,35 @@ function setupLayerToggles() {
       document.getElementById("data-adamawa-control").innerHTML = "";
     }
   });
-  
-  document.getElementById("layer-adamawa-exclusion").addEventListener("change", (e) => {
-    toggleLayer(adamawaExclusionCircles, e.target.checked);
+
+  document.getElementById("layer-adamawa-treatment").addEventListener("change", (e) => {
+    toggleLayer(adamawaTreatmentCircles, e.target.checked);
     if (e.target.checked) {
-      displayLayerData("adamawa-exclusion", adamawaExclusionCircles);
+      displayLayerData("adamawa-treatment", adamawaTreatmentCircles);
     } else {
-      document.getElementById("data-adamawa-exclusion").innerHTML = "";
+      document.getElementById("data-adamawa-treatment").innerHTML = "";
     }
   });
 
-  // Nasarawa Layers
-  document.getElementById("layer-nasarawa-treatment").addEventListener("change", (e) => {
-    toggleLayer(nasarawaTreatmentCircles, e.target.checked);
+  // --- Nasarawa Layers ---
+  document.getElementById("layer-nasarawa-treatment-exclusion").addEventListener("change", (e) => {
+    toggleLayer(nasarawaTreatmentExclusionCircles, e.target.checked);
     if (e.target.checked) {
-      displayLayerData("nasarawa-treatment", nasarawaTreatmentCircles);
+      displayLayerData("nasarawa-treatment-exclusion", nasarawaTreatmentExclusionCircles);
     } else {
-      document.getElementById("data-nasarawa-treatment").innerHTML = "";
+      document.getElementById("data-nasarawa-treatment-exclusion").innerHTML = "";
     }
   });
-  
+
+  document.getElementById("layer-nasarawa-control-exclusion").addEventListener("change", (e) => {
+    toggleLayer(nasarawaControlExclusionCircles, e.target.checked);
+    if (e.target.checked) {
+      displayLayerData("nasarawa-control-exclusion", nasarawaControlExclusionCircles);
+    } else {
+      document.getElementById("data-nasarawa-control-exclusion").innerHTML = "";
+    }
+  });
+
   document.getElementById("layer-nasarawa-control").addEventListener("change", (e) => {
     toggleLayer(nasarawaControlCircles, e.target.checked);
     if (e.target.checked) {
@@ -273,13 +364,13 @@ function setupLayerToggles() {
       document.getElementById("data-nasarawa-control").innerHTML = "";
     }
   });
-  
-  document.getElementById("layer-nasarawa-exclusion").addEventListener("change", (e) => {
-    toggleLayer(nasarawaExclusionCircles, e.target.checked);
+
+  document.getElementById("layer-nasarawa-treatment").addEventListener("change", (e) => {
+    toggleLayer(nasarawaTreatmentCircles, e.target.checked);
     if (e.target.checked) {
-      displayLayerData("nasarawa-exclusion", nasarawaExclusionCircles);
+      displayLayerData("nasarawa-treatment", nasarawaTreatmentCircles);
     } else {
-      document.getElementById("data-nasarawa-exclusion").innerHTML = "";
+      document.getElementById("data-nasarawa-treatment").innerHTML = "";
     }
   });
 }

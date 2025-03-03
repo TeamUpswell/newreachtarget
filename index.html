@@ -42,37 +42,83 @@
   <body>
     <div id="layer-controls">
       <h3>Abuja Layers</h3>
-      <label><input type="checkbox" id="layer-abuja-exclusion"> Exclusion</label><br>
-      <label><input type="checkbox" id="layer-abuja-control"> Control</label><br>
-      <label><input type="checkbox" id="layer-abuja-treatment"> Treatment</label><br>
+      <label>
+        <input type="checkbox" id="layer-abuja-treatment-exclusion">
+        Treatment Exclusion
+      </label><br>
+      <label>
+        <input type="checkbox" id="layer-abuja-control-exclusion">
+        Control Exclusion
+      </label><br>
+      <label>
+        <input type="checkbox" id="layer-abuja-control">
+        Control
+      </label><br>
+      <label>
+        <input type="checkbox" id="layer-abuja-treatment">
+        Treatment
+      </label><br>
+
       <h3>Adamawa Layers</h3>
-      <label><input type="checkbox" id="layer-adamawa-treatment"> Treatment</label><br>
-      <label><input type="checkbox" id="layer-adamawa-control"> Control</label><br>
-      <label><input type="checkbox" id="layer-adamawa-exclusion"> Exclusion</label><br>
+      <label>
+        <input type="checkbox" id="layer-adamawa-treatment-exclusion">
+        Treatment Exclusion
+      </label><br>
+      <label>
+        <input type="checkbox" id="layer-adamawa-control-exclusion">
+        Control Exclusion
+      </label><br>
+      <label>
+        <input type="checkbox" id="layer-adamawa-control">
+        Control
+      </label><br>
+      <label>
+        <input type="checkbox" id="layer-adamawa-treatment">
+        Treatment
+      </label><br>
+
       <h3>Nasarawa Layers</h3>
-      <label><input type="checkbox" id="layer-nasarawa-treatment"> Treatment</label><br>
-      <label><input type="checkbox" id="layer-nasarawa-control"> Control</label><br>
-      <label><input type="checkbox" id="layer-nasarawa-exclusion"> Exclusion</label>
+      <label>
+        <input type="checkbox" id="layer-nasarawa-treatment-exclusion">
+        Treatment Exclusion
+      </label><br>
+      <label>
+        <input type="checkbox" id="layer-nasarawa-control-exclusion">
+        Control Exclusion
+      </label><br>
+      <label>
+        <input type="checkbox" id="layer-nasarawa-control">
+        Control
+      </label><br>
+      <label>
+        <input type="checkbox" id="layer-nasarawa-treatment">
+        Treatment
+      </label>
     </div>
     
     <div id="map"></div>
     
     <!-- Data container at the bottom -->
     <div id="data-container">
-      <div id="data-abuja-exclusion"></div>
+      <div id="data-abuja-treatment-exclusion"></div>
+      <div id="data-abuja-control-exclusion"></div>
       <div id="data-abuja-control"></div>
       <div id="data-abuja-treatment"></div>
-      <div id="data-adamawa-treatment"></div>
+      
+      <div id="data-adamawa-treatment-exclusion"></div>
+      <div id="data-adamawa-control-exclusion"></div>
       <div id="data-adamawa-control"></div>
-      <div id="data-adamawa-exclusion"></div>
-      <div id="data-nasarawa-treatment"></div>
+      <div id="data-adamawa-treatment"></div>
+      
+      <div id="data-nasarawa-treatment-exclusion"></div>
+      <div id="data-nasarawa-control-exclusion"></div>
       <div id="data-nasarawa-control"></div>
-      <div id="data-nasarawa-exclusion"></div>
+      <div id="data-nasarawa-treatment"></div>
     </div>
 
     <!-- Load main.js as a module -->
     <script type="module" src="main.js"></script>
     <!-- Include Google Maps API with your API key and callback -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWjpPtJZ58mVuHCdZ3ukSStaRATqzmto"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWjpPtJZ58mVuHCdZ3ukSStaRATqzmto"></script>
   </body>
 </html>

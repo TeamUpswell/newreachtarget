@@ -1,42 +1,63 @@
 export const adamawaControlExclusion = [
-  { center: { lat: 9.3794854, lng: 7.9002404 }, radius: 40192.26 }, // Point 1
-  { center: { lat: 9.2295117, lng: 8.3298777 }, radius: 40192.26 }, // Point 2
-  { center: { lat: 8.9325309, lng: 8.741865 }, radius: 40192.26 }, // Point 3
-  { center: { lat: 8.5782792, lng: 9.0233897 }, radius: 40192.26 }, // Point 4
-  { center: { lat: 8.0564834, lng: 8.754413 }, radius: 40192.26 }, // Point 5
-  { center: { lat: 8.1369628, lng: 8.1576898 }, radius: 40192.26 }, // Point 6
-  { center: { lat: 8.4495158, lng: 7.7154926 }, radius: 40192.26 }, // Point 7
-  { center: { lat: 8.6858023, lng: 7.3007562 }, radius: 40192.26 }, // Point 8
-  { center: { lat: 9.1118242, lng: 7.0837761 }, radius: 40192.26 }, // Point 9
-  { center: { lat: 9.4520064, lng: 7.3337151 }, radius: 40192.26 }, // Point 10
-  { center: { lat: 9.7531626, lng: 7.6735053 }, radius: 40192.26 }, // Point 11
-  { center: { lat: 9.5825855, lng: 8.2008491 }, radius: 40192.26 }, // Point 12
-  { center: { lat: 9.3468859, lng: 8.7144599 }, radius: 40192.26 }, // Point 13
-  { center: { lat: 8.9808304, lng: 9.1594062 }, radius: 40192.26 }, // Point 14
-  { center: { lat: 8.4514342, lng: 9.3104682 }, radius: 40192.26 }, // Point 15
-  { center: { lat: 8.0899387, lng: 9.1813789 }, radius: 40192.26 }, // Point 16
-  { center: { lat: 7.7444481, lng: 8.6815009 }, radius: 40192.26 }, // Point 17
-  { center: { lat: 7.7798265, lng: 8.1184516 }, radius: 40192.26 }, // Point 18
-  { center: { lat: 8.0817808, lng: 7.6158271 }, radius: 40192.26 }, // Point 19
-  { center: { lat: 8.3128549, lng: 7.2285591 }, radius: 40192.26 }, // Point 20
-  { center: { lat: 8.7800198, lng: 6.9319282 }, radius: 40192.26 }, // Point 21
-  { center: { lat: 9.3333351, lng: 6.87425 }, radius: 40192.26 }, // Point 22
-  { center: { lat: 9.7071424, lng: 7.1956001 }, radius: 40192.26 }, // Point 23
-  { center: { lat: 9.6949648, lng: 8.6252021 }, radius: 40192.26 }, // Point 24
-  { center: { lat: 9.8851023, lng: 8.1266975 }, radius: 40192.26 }, // Point 25
-  { center: { lat: 9.9513879, lng: 8.553791 }, radius: 40192.26 }, // Point 26
-  { center: { lat: 9.9838494, lng: 7.7462959 }, radius: 40192.26 }, // Point 27
-  { center: { lat: 9.5331615, lng: 8.9108467 }, radius: 40192.26 }, // Point 28
-  { center: { lat: 9.2852306, lng: 9.0564155 }, radius: 40192.26 }, // Point 29
-  { center: { lat: 9.85181, lng: 8.9245032 }, radius: 40192.26 }, // Point 30
-  { center: { lat: 9.2003695, lng: 9.3694495 }, radius: 40192.26 }, // Point 31
-  { center: { lat: 9.7394886, lng: 9.2183875 }, radius: 40192.26 }, // Point 32
-  { center: { lat: 8.7747655, lng: 9.3613147 }, radius: 40192.26 }, // Point 33
-  { center: { lat: 7.773249, lng: 9.0331495 }, radius: 40192.26 }, // Point 34
-  { center: { lat: 8.9946774, lng: 6.6970498 }, radius: 40192.26 }, // Point 35
-  { center: { lat: 9.19441, lng: 7.36558 }, radius: 40192.26 }, // Point 36
-  
-  
+// Point 3
+{ center: { lat: 9.7637898, lng: 11.9811984 }, radius: 40291.1 },
+// Point 4
+{ center: { lat: 9.7028844, lng: 12.7159072 }, radius: 40291.1 },
+// Point 5
+{ center: { lat: 9.1941189, lng: 12.8854603 }, radius: 40291.1 },
+// Point 6
+{ center: { lat: 8.7885505, lng: 12.5174188 }, radius: 40291.1 },
+// Point 7
+{ center: { lat: 8.89676, lng: 12.12703 }, radius: 40291.1 },
+// Point 9
+{ center: { lat: 9.3315059, lng: 13.5443327 }, radius: 40291.1 },
+// Point 10
+{ center: { lat: 9.9260499, lng: 13.2521362 }, radius: 40291.1 },
+// Point 11
+{ center: { lat: 8.6534685, lng: 13.3949573 }, radius: 40291.1 },
+// Point 13
+{ center: { lat: 8.2690296, lng: 12.9877225 }, radius: 40291.1 },
+// Point 14
+{ center: { lat: 8.2907732, lng: 12.235159 }, radius: 40291.1 },
+// Point 15
+{ center: { lat: 8.6928101, lng: 11.4771023 }, radius: 40291.1 },
+// Point 16
+{ center: { lat: 9.3492577, lng: 11.3068143 }, radius: 40291.1 },
+// Point 17
+{ center: { lat: 10.1234596, lng: 11.5814725 }, radius: 40291.1 },
+// Point 18
+{ center: { lat: 10.46936, lng: 12.3615018 }, radius: 40291.1 },
+// Point 19
+{ center: { lat: 10.5503751, lng: 13.273367 }, radius: 40291.1 },
+// Point 20
+{ center: { lat: 10.0856038, lng: 13.9655057 }, radius: 40291.1 },
+// Point 21
+{ center: { lat: 9.5551638, lng: 14.0863553 }, radius: 40291.1 },
+// Point 22
+{ center: { lat: 10.6799549, lng: 13.9270535 }, radius: 40291.1 },
+// Point 23
+{ center: { lat: 10.3018619, lng: 14.5038357 }, radius: 40291.1 },
+// Point 24
+{ center: { lat: 9.7284619, lng: 14.6741238 }, radius: 40291.1 },
+// Point 25
+{ center: { lat: 8.9587878, lng: 14.1028348 }, radius: 40291.1 },
+// Point 26
+{ center: { lat: 9.1323829, lng: 14.7620145 }, radius: 40291.1 },
+// Point 27
+{ center: { lat: 10.6745568, lng: 11.7729073 }, radius: 40291.1 },
+// Point 28
+{ center: { lat: 10.9052358, lng: 12.7726518 }, radius: 40291.1 },
+// Point 27 (duplicate label in source data)
+{ center: { lat: 9.9542071, lng: 12.2547473 }, radius: 40291.1 },
+// Point 28 (duplicate label in source data)
+{ center: { lat: 10.3386668, lng: 12.8187401 }, radius: 40291.1 },
+// Point 29
+{ center: { lat: 8.9740366, lng: 13.3241112 }, radius: 40291.1 },
+// Point 30
+{ center: { lat: 9.6003215, lng: 12.5992977 }, radius: 40291.1 },
+// Point 33
+{ center: { lat: 9.37389, lng: 11.938 }, radius: 40291.1 },
+
 ];
 
   

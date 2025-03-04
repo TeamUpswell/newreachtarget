@@ -1,12 +1,12 @@
 export const adamawaControlExclusion = [
   { center: { lat: 9.7637898,  lng: 11.9811984 }, radius: 40291.15 }, // Point 3
-  { center: { lat: 9.7028844,  lng: 12.7159072 }, radius: 40291.15 }, // Point 4
+  { center: { lat: 9.70288,  lng: 12.7159 }, radius: 40291.15 }, // Point 4
   { center: { lat: 9.1941189,  lng: 12.8854603 }, radius: 40291.15 }, // Point 5
-  { center: { lat: 8.7885505,  lng: 12.5174188 }, radius: 40291.15 }, // Point 6
-  { center: { lat: 8.90762,  lng: 12.149 }, radius: 40291.15 }, // Point 7
-  { center: { lat: 9.3699698,  lng: 12.0164866 }, radius: 40291.15 }, // Point 8
-  { center: { lat: 9.3315059,  lng: 13.5443327 }, radius: 40291.15 }, // Point 9
-  { center: { lat: 9.9260499,  lng: 13.2521362 }, radius: 40291.15 }, // Point 10
+  { center: { lat: 8.8184072,  lng: 12.5160452 }, radius: 40291.15 }, // Point 6
+  { center: { lat: 8.98087,  lng: 12.14008 }, radius: 40291.15 }, // Point 7
+  { center: { lat: 9.36996,  lng: 12.01648 }, radius: 40291.15 }, // Point 8
+  { center: { lat: 9.3315059,  lng: 13.25213 }, radius: 40291.15 }, // Point 9
+  { center: { lat: 9.92604,  lng: 13.3070667 }, radius: 40291.15 }, // Point 10
   { center: { lat: 8.6534685,  lng: 13.3949573 }, radius: 40291.15 }, // Point 11
   { center: { lat: 8.2690296,  lng: 12.9877225 }, radius: 40291.15 }, // Point 13
   { center: { lat: 8.2907732,  lng: 12.235159 },  radius: 40291.15 }, // Point 14
@@ -27,9 +27,8 @@ export const adamawaControlExclusion = [
   { center: { lat: 9.9542071,  lng: 12.2547473 }, radius: 40291.15 }, // Point 27
   { center: { lat: 10.3386668, lng: 12.8187401 }, radius: 40291.15 }, // Point 28
   { center: { lat: 8.9740366,  lng: 13.3241112 }, radius: 40291.15 }, // Point 29
-  { center: { lat: 9.60979,  lng: 12.56084 }, radius: 40291.15 }, // Point 30
-  
-  
+  { center: { lat: 9.69779,  lng: 12.22846 }, radius: 40291.15 }, // Point 30
+  { center: { lat: 8.9553,  lng: 12.2374 }, radius: 40291.15 }, // Point 31 
 ];
 
   
